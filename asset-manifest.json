@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/namerepository/static/css/main.72ccdc0e.css",
-    "main.js": "/namerepository/static/js/main.21af96f6.js",
-    "static/js/787.a3ec2c4a.chunk.js": "/namerepository/static/js/787.a3ec2c4a.chunk.js",
-    "index.html": "/namerepository/index.html",
-    "main.72ccdc0e.css.map": "/namerepository/static/css/main.72ccdc0e.css.map",
-    "main.21af96f6.js.map": "/namerepository/static/js/main.21af96f6.js.map",
-    "787.a3ec2c4a.chunk.js.map": "/namerepository/static/js/787.a3ec2c4a.chunk.js.map"
+    "main.css": "/Troynoi-tribute/static/css/main.72ccdc0e.css",
+    "main.js": "/Troynoi-tribute/static/js/main.6fc32c5f.js",
+    "static/js/787.a3ec2c4a.chunk.js": "/Troynoi-tribute/static/js/787.a3ec2c4a.chunk.js",
+    "index.html": "/Troynoi-tribute/index.html",
+    "main.72ccdc0e.css.map": "/Troynoi-tribute/static/css/main.72ccdc0e.css.map",
+    "main.6fc32c5f.js.map": "/Troynoi-tribute/static/js/main.6fc32c5f.js.map",
+    "787.a3ec2c4a.chunk.js.map": "/Troynoi-tribute/static/js/787.a3ec2c4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72ccdc0e.css",
-    "static/js/main.21af96f6.js"
+    "static/js/main.6fc32c5f.js"
   ]
 }
