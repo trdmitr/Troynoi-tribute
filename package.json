@@ -2,6 +2,7 @@
   "name": "tribbl-trib",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://trdmitr.github.io/Troynoi-tribute/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
