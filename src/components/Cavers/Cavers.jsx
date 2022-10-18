@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useQuery } from 'react'
 import classes from './Cavers.module.css'
 import { useNavigate } from 'react-router-dom'
 import cl from '../Pub.module.css'
@@ -17,7 +17,7 @@ const Cavers = () => {
 
 
     }
-    useEffect(() => {
+    useQuery(() => {
         getCavers()
 
     }, [])
