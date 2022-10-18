@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useQuery } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams } from "react-router";
 import classes from './SingleOne.module.css'
 import { useNavigate } from 'react-router-dom'
@@ -21,7 +21,7 @@ const SingleOne = () => {
     const response = await CaverServise.getCavers();
     setSingleSongs(response.record.cavers)
 }
-useQuery(() => {
+useEffect(() => {
   getCavers()
   
 }, [])
