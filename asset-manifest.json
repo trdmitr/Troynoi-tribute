@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Troynoi-tribute/static/css/main.f949e56f.css",
-    "main.js": "/Troynoi-tribute/static/js/main.64a11477.js",
+    "main.css": "/Troynoi-tribute/static/css/main.c0428766.css",
+    "main.js": "/Troynoi-tribute/static/js/main.873cb78d.js",
     "static/js/787.a3ec2c4a.chunk.js": "/Troynoi-tribute/static/js/787.a3ec2c4a.chunk.js",
     "index.html": "/Troynoi-tribute/index.html",
-    "main.f949e56f.css.map": "/Troynoi-tribute/static/css/main.f949e56f.css.map",
-    "main.64a11477.js.map": "/Troynoi-tribute/static/js/main.64a11477.js.map",
+    "main.c0428766.css.map": "/Troynoi-tribute/static/css/main.c0428766.css.map",
+    "main.873cb78d.js.map": "/Troynoi-tribute/static/js/main.873cb78d.js.map",
     "787.a3ec2c4a.chunk.js.map": "/Troynoi-tribute/static/js/787.a3ec2c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f949e56f.css",
-    "static/js/main.64a11477.js"
+    "static/css/main.c0428766.css",
+    "static/js/main.873cb78d.js"
   ]
 }
