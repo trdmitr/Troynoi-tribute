@@ -13,13 +13,13 @@ const Homepage = () => {
         <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
         <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
         {/* <PlayButton  onClick={() => navigate("/playlist")}></PlayButton> */}
-        <div className="header">
+        <div className={classes.front_header}>
                     <h>Тройной трибьют!</h>
                 </div>
-                <div className="media">
-                    <img className="media-image_front" src="https://drive.google.com/uc?export=download&id=1t8TbhEr-plZdiTN15mBZf8GNw35Cc2Fo" width={80} alt="Каверы Подземки" />
+                <div className={classes.front_media}>
+                    <img src="https://drive.google.com/uc?export=download&id=1t8TbhEr-plZdiTN15mBZf8GNw35Cc2Fo" width={80} alt="Каверы Подземки" />
                 </div>
-                <div className="media-body">
+                <div className={classes.front_body}>
                     <span>С ДНЁМ РОЖДЕНИЯ ПРЕКРАСНЫХ ИСПОЛНИТЕЛЕЙ! 🤘🏻🤘🏻🤘🏻 </span>
                 </div>
       </div>
