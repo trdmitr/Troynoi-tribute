@@ -1,0 +1,29 @@
+.myModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0, 0.5);
+    z-index: 101;
+}
+
+.myModalContent {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: large;
+    text-align: center;
+    padding: 25px;
+    background: #97901a;
+    border-radius: 16px;
+    min-width: 250px;
+    -webkit-box-shadow: 0px 5px 10px 19px rgba(229, 117, 29, 0.2) inset;
+-moz-box-shadow: 0px 5px 10px 19px rgba(229, 117, 29, 0.2) inset;
+box-shadow: 0px 5px 10px 19px rgba(229, 117, 29, 0.2) inset;
+}
+
+.myModal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

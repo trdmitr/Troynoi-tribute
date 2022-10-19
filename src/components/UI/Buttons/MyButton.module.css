@@ -65,9 +65,9 @@
 
 .playBtn {
     position: absolute;
-    top: 100%;
-    left: 46%;
-    background-color: rgb(110, 29, 131); /* Blue background */
+    top: -6%;
+    left: 83%;
+    background-color: #97901a; /* Blue background */
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 2px 6px;
