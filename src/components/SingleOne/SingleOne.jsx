@@ -13,6 +13,7 @@ import CaverServise from '../API/CaverServise';
 import './SingleOne.css'
 
 
+
 const SingleOne = () => {
   const navigate = useNavigate();
   const params = useParams(); 
@@ -31,34 +32,35 @@ useEffect(() => {
   
 }, [singleSongs])
 // console.log (currSings)
+const mediaClasses = [classes.SingleOne];
 
-const content = useMemo(() => {
-          
+// function isSong () => {
+//   return true;
+// }
+const content = useMemo(() => {         
   return  currSings.map((currSing) =>   
- <div className="media_song" key={currSing.id}> 
-    <img className="media-image" src={currSing.photo} width={80} alt={currSing.name} />
-    <div className="header_song">
+ <div className={classes.mediaSong} key={currSing.id}> 
+    <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
+    <div className= {classes.headerSong}>
 <h2>{currSing.name}</h2></div>
-{/* const element = <a href="https://www.reactjs.org"> link </a>; */}
-{/* <YoutButton onClick={() => currSing.link}>Канал исполнителя </YoutButton> */}
-<a className='LinkTo'  href={currSing.link}> Канал исполнителя </a>
+<a className={classes.linkTo}  href={currSing.link}> Канал исполнителя </a>
 
-<div className= {`
-audio_block
-${currSing.audio1 ? '' : 'hidden'}
-`}>
+<div className = {[
+classes.audioBlock,
+currSing.audio1 ? '' : 'hidden'].join(' ')
+}>
 <p>{currSing.audio_name1}</p>
-<audio controls className={currSing.audio1 ? '': 'hidden'}
+<audio controls className={currSing.audio1 ? '': classes.mediaHidden}
   source src={currSing.audio1} type="audio/mpeg" /> 
  <p>{currSing.audio_name2}</p>
-<audio controls className={currSing.audio2 ? '': 'hidden'}
+<audio controls className={currSing.audio2 ? '': classes.mediaHidden}
   source src={currSing.audio2} type="audio/mpeg" /> 
   <p>{currSing.audio_name3}</p>
-<audio controls className={currSing.audio3 ? '': 'hidden'}
+<audio controls className={currSing.audio3 ? '': classes.mediaHidden}
   source src={currSing.audio3} type="audio/mpeg" />  
 </div>
 <div>
-<img className="tzi-image" src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
+<img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
 </div>
 <div className= {`
 video_block
