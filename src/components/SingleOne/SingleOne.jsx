@@ -10,7 +10,7 @@ import IconButtonHome from '../UI/Buttons/IconButtonHome'
 // import YoutButton from '../UI/Buttons/YoutButton'
 import BackButton from '../UI/Buttons/MyButton';
 import CaverServise from '../API/CaverServise';
-import './SingleOne.css'
+// import './SingleOne.css'
 
 
 
@@ -37,7 +37,7 @@ const mediaClasses = [classes.SingleOne];
 // function isSong () => {
 //   return true;
 // }
-const content = useMemo(() => {         
+const listContent = useMemo(() => {         
   return  currSings.map((currSing) =>   
  <div className={classes.mediaSong} key={currSing.id}> 
     <img className={classes.mediaImage} src={currSing.photo} width={80} alt={currSing.name} />
@@ -86,7 +86,7 @@ id= {classes.videoFrame} url = {currSing.video1} controls={true} />
                 <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
                 {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
                 <BackButton onClick={() => navigate("/cavers")}>Назад</BackButton>
-                {content}
+                {listContent}
             </div>
         </div>
   )
