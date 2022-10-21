@@ -47,7 +47,7 @@ const content = useMemo(() => {
 
 <div className = {[
 classes.audioBlock,
-currSing.audio1 ? '' : 'hidden'].join(' ')
+currSing.audio1 ? '' : classes.mediaHidden].join(' ')
 }>
 <p>{currSing.audio_name1}</p>
 <audio controls className={currSing.audio1 ? '': classes.mediaHidden}
@@ -62,17 +62,17 @@ currSing.audio1 ? '' : 'hidden'].join(' ')
 <div>
 <img className={classes.tziImage} src={currSing.picture_tzitata} width={80} alt="Цитаты Пикник"/>
 </div>
-<div className= {`
-video_block
-${currSing.video1 ? '': 'hidden'}
-`} >
+<div className = {[
+classes.videoBlock,
+currSing.video1 ? '' : classes.mediaHidden].join(' ')
+}>
 <p>{currSing.video_name1}</p>
-<ReactPlayer className={currSing.video1 ? '': 'hidden'}
-id="video_frame" url = {currSing.video1} controls={true} />
+<ReactPlayer className={currSing.video1 ? '': classes.mediaHidden}
+id= {classes.videoFrame} url = {currSing.video1} controls={true} />
 <p>{currSing.video_name2}</p>
-<ReactPlayer className={currSing.video2 ? '': 'hidden'} id="video_frame" url = {currSing.video2}  controls={true} />
+<ReactPlayer className={currSing.video2 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video2}  controls={true} />
 <p>{currSing.video_name3}</p>
-<ReactPlayer className={currSing.video3 ? '': 'hidden'} id="video_frame" url = {currSing.video3} controls={true} />
+<ReactPlayer className={currSing.video3 ? '': classes.mediaHidden} id={classes.videoFrame} url = {currSing.video3} controls={true} />
 </div> 
 
 </div>);

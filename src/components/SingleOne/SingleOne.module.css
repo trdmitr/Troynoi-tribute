@@ -72,20 +72,20 @@
     text-align: center;
     color: #eee;
   }
-  .video_block > p {
+  .videoBlock > p {
     display: block;
     font-size: 1.5rem;
     text-align: center;
     color: #eee;
   }
-  .video_block {
+  .videoBlock {
     position: relative;
     
     width: 100%;
     height: 400px;
     
   }
-  #video_frame
+  #videoFrame
   {
     /* position: absolute; */
     top: 0;
