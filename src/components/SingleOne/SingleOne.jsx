@@ -6,37 +6,17 @@ import ReactPlayer from "react-player";
 import cl from '../Pub.module.css'
 import CaverButton from '../UI/Buttons/CaverButton'
 import IconButtonHome from '../UI/Buttons/IconButtonHome'
-// import PlayButton from '../UI/Buttons/PlayButton'
-// import YoutButton from '../UI/Buttons/YoutButton'
 import BackButton from '../UI/Buttons/MyButton';
-import CaverServise from '../API/CaverServise';
-// import './SingleOne.css'
 
-
-
-const SingleOne = () => {
+const SingleOne = ({ songs } ) => {
   const navigate = useNavigate();
   const params = useParams(); 
-  const [singleSongs, setSingleSongs] = useState([]);
-  async function getCavers() {
-    const response = await CaverServise.getCavers();
-    setSingleSongs(response.record.cavers)
-}
-useEffect(() => {
-  getCavers()
-  
-}, [])
 
   const currSings = useMemo(() => {
-    return singleSongs.filter(singleSongs => singleSongs.id == params.id);
+    return songs.filter(songs => songs.id == params.id);
   
-}, [singleSongs])
-// console.log (currSings)
-const mediaClasses = [classes.SingleOne];
+}, [songs])
 
-// function isSong () => {
-//   return true;
-// }
 const listContent = useMemo(() => {         
   return  currSings.map((currSing) =>   
  <div className={classes.mediaSong} key={currSing.id}> 
