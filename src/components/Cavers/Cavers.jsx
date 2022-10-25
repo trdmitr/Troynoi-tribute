@@ -7,8 +7,9 @@ import IconButtonHome from '../UI/Buttons/IconButtonHome'
 import PlayButton from '../UI/Buttons/PlayButton'
 import About from '../About'
 import Modal from '../UI/Buttons/Modals/Modals'
+import Loader from '../UI/Loader/Loader'
 
-const Cavers = ({ songs}) => {
+const Cavers = ({ songs, isSongsLoading}) => {
     
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
@@ -27,14 +28,18 @@ const Cavers = ({ songs}) => {
 
             <div className={classes.content}>
                 <Modal visible={modal} setVisible={setModal}>
-                    <About />
+                 <About />
                 </Modal>
                 <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
                 <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
                 <PlayButton onClick={() => setModal(true)}></PlayButton>
                 {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
+                {isSongsLoading ? <div 
+                style={{display: 'flex', justifyContent: 'center', marginTop: '20em'}}
+                    ><Loader/></div> :
                 <div className={classes.row} >
-                    {singContent}</div>
+                    {singContent}
+                </div>}
             </div>
 
         </div>

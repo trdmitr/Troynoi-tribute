@@ -35,23 +35,17 @@ function App() {
 
   return (  
     <Fragment>
-  
        <HashRouter>
       <div>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/cavers" element={isSongsLoading ? <div 
-          style={{display: 'flex', justifyContent: 'center'}}
-          ><Loader/></div> 
-          :
-          <Cavers songs = {songs}/>} />
-          {/* <Route exact path='/playlist' element={<PlayList />} /> */}
+          <Route exact path="/" element={<Homepage />} />    
+          {/* <Route exact path='/playlist' element={<PlayList />} />  */}
+          <Route path="/cavers" element={<Cavers songs = {songs} isSongsLoading = {false}/>} />
           <Route path='/cavers/:id' element={<SingleOne songs = {songs} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </HashRouter>
- 
     </Fragment>
    ); 
 }

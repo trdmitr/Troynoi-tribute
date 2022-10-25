@@ -2,7 +2,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 10px dashed rgb(0, 2, 128);
+    border: 10px dashed #b9b33d;
     animation: rotate 1s infinite linear;
 }
 @keyframes rotate {

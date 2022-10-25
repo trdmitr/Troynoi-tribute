@@ -7,7 +7,11 @@ const [error, setError] = useState('');
 const fetching = async () => {
     try {
         setIsloading(true)
-        await callback()
+        setTimeout(async() => {
+      await callback()
+      
+              }, 1000)
+        setIsloading(false)
     } catch(e) {
         setError(e.message);
 
