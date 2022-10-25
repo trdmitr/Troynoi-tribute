@@ -8,7 +8,8 @@ import PlayButton from '../UI/Buttons/PlayButton'
 import About from '../About'
 import Modal from '../UI/Buttons/Modals/Modals'
 
-const Cavers = ({ songs }) => {
+const Cavers = ({ songs}) => {
+    
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
@@ -33,10 +34,7 @@ const Cavers = ({ songs }) => {
                 <PlayButton onClick={() => setModal(true)}></PlayButton>
                 {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
                 <div className={classes.row} >
-                    {singContent}
-                </div>
-
-
+                    {singContent}</div>
             </div>
 
         </div>
