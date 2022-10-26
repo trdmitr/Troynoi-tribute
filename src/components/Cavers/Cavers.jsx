@@ -8,13 +8,17 @@ import PlayButton from '../UI/Buttons/PlayButton'
 import About from '../About'
 import Modal from '../UI/Buttons/Modals/Modals'
 import Loader from '../UI/Loader/Loader'
-
-const Cavers = ({ songs, isSongsLoading}) => {
-    
+// import { useFetching } from '../Hooks/useFetching';
+const Cavers = ({ songs }) => {
+    // const [fetchSongs, isLoading, songError ] = useFetching ()
     const navigate = useNavigate();
     const [modal, setModal] = useState(false);
     const singContent = useMemo(() => {
         return songs.map((caver) => (
+            // isLoading ? <div 
+            //     style={{display: 'flex', justifyContent: 'center', marginTop: '20em'}}
+            //         ><Loader/></div> 
+            // 		: 
             <div className={classes.col} key={caver.index} onClick={() => navigate(`/cavers/${caver.id}`)}>
                 <div className={classes.item}>
                     <img src={caver.photo} alt={caver.name} />
@@ -28,18 +32,18 @@ const Cavers = ({ songs, isSongsLoading}) => {
 
             <div className={classes.content}>
                 <Modal visible={modal} setVisible={setModal}>
-                 <About />
+                    <About />
                 </Modal>
                 <IconButtonHome onClick={() => navigate("/")}>Главная</IconButtonHome>
                 <CaverButton onClick={() => navigate("/cavers")}>Каверы</CaverButton>
                 <PlayButton onClick={() => setModal(true)}></PlayButton>
                 {/* <PlayButton onClick={() => navigate("/playlist")}></PlayButton> */}
-                {isSongsLoading ? <div 
+                {/* {isSongsLoading ? <div 
                 style={{display: 'flex', justifyContent: 'center', marginTop: '20em'}}
-                    ><Loader/></div> :
+                    ><Loader/></div> : */}
                 <div className={classes.row} >
                     {singContent}
-                </div>}
+                </div>
             </div>
 
         </div>
