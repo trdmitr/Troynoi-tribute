@@ -59,11 +59,11 @@ const CaversContent = () => {
 //     }, [])
 const Content = useMemo(() => {
     // getCavers()
-    console.log ("songs ", songs)
-    {songs.map((caver) => (
-        <div className="b-col" key={caver.index} onClick={() => navigate(`/cavers/${caver.id}`)}>   
+    // console.log ("songs ", songs)
+    {songs.map(({caver}) => (
+        <div className="b-col" key={caver.id.toSting()} onClick={() => navigate(`/cavers/${caver.id}`)}>   
                 <div className="b-item"> 
-                <img src={caver.photo} alt=""/> 
+                <img src={caver.photo} alt={caver.name}/> 
                                        
             </div>
             <p>{caver.name}</p>  

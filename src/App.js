@@ -15,29 +15,44 @@ function NotFound() {
 }
 function App() {
   const [songs, setSongs] = useState([]);
-  const [fetchSongs, isLoading, songError ] = useFetching (async () => {
+  // const [isSongsLoad, setIsSongsLoad] = useState(true);
+  const [fetchSongs, isSongsLoading, songError ] = useFetching (async () => {
     const response = await CaverServise.getCavers();
     setSongs(response.record.cavers)
   });
+  // async function getCavers() {
+  //   setIsSongsLoad(true)
+  //   setTimeout(async() => {
+      
+  //   setIsSongsLoad(false)
+  //   }, 1000)
+   
+// }
     useEffect(() => {
     fetchSongs()
-    
+    console.log('App', isSongsLoading)
 }, [])
 
   return (  
     <Fragment>
-
+  
        <HashRouter>
       <div>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />    
-          {/* <Route exact path='/playlist' element={<PlayList />} />  */}
-          <Route path="/cavers" element={<Cavers songs = {songs} songError ={songError}/>} />
+          <Route exact path="/" element={<Homepage />} />
+          {/* <Route path="/cavers" element={isSongsLoading ? <div 
+          style={{display: 'flex', justifyContent: 'center'}}
+          ><Loader/></div> 
+          : */}
+          
+          <Route path="/cavers" element={<Cavers isSongsLoading = {isSongsLoading} songs = {songs}/>} />
+          {/* <Route exact path='/playlist' element={<PlayList />} /> */}
           <Route path='/cavers/:id' element={<SingleOne songs = {songs} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </HashRouter>
+ 
     </Fragment>
    ); 
 }
